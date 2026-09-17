@@ -1,0 +1,26 @@
+.masked-text {
+  display: inline-block;
+  color: transparent;
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: masked-drift 5s ease-in-out infinite alternate;
+}
+
+@keyframes masked-drift {
+  0% {
+    background-position: 0% 40%;
+  }
+  100% {
+    background-position: 100% 60%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .masked-text {
+    animation: none;
+    background-position: 50% 50%;
+  }
+}

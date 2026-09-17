@@ -1,0 +1,27 @@
+.skills-page {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.skills-page-overlay {
+  padding: 150px 0 60px;
+  background: rgba(10, 10, 13, 0.82);
+}
+
+[data-theme="light"] .skills-page-overlay {
+  background: rgba(239, 233, 230, 0.88);
+}
+
+.skills-page h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--text);
+  margin: 6px 0 14px;
+}
+
+.skills-page-lead {
+  color: var(--text-dim);
+  max-width: 520px;
+  line-height: 1.6;
+}

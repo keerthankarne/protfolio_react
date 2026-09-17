@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Anton&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap");
+
+/* ---- Dark theme (default) — the smoke/ember palette ---- */
+:root,
+[data-theme="dark"] {
+  --bg: #0a0a0d;
+  --bg-raised: #141318;
+  --bg-panel: rgba(20, 19, 24, 0.72);
+  --text: #f4f1ee;
+  --text-dim: #a9a4ac;
+  --accent: #fa236e;
+  --accent-2: #ff7a3d;
+  --border: rgba(244, 241, 238, 0.12);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --nav-bg: rgba(10, 10, 13, 0.55);
+  --nav-bg-soft: rgba(10, 10, 13, 0.18);
+  --card-bg: rgba(0, 0, 0, 0.55);
+}
+
+/* ---- Light theme — the mist palette ---- */
+[data-theme="light"] {
+  --bg: #efe9e6;
+  --bg-raised: #ffffff;
+  --bg-panel: rgba(255, 255, 255, 0.75);
+  --text: #201c22;
+  --text-dim: #5c5560;
+  --accent: #d81159;
+  --accent-2: #e85d2d;
+  --border: rgba(32, 28, 34, 0.12);
+  --shadow-color: rgba(32, 28, 34, 0.18);
+  --nav-bg: rgba(239, 233, 230, 0.7);
+  --nav-bg-soft: rgba(239, 233, 230, 0.25);
+  --card-bg: rgba(255, 255, 255, 0.7);
+}
+
+:root {
+  --font-display: "Henny Penny", cursive;
+  --font-heading: "Anton", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --container: 1180px;
+
+  --transition-theme: background-color 0.35s ease, color 0.35s ease,
+    border-color 0.35s ease;
+}

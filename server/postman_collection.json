@@ -1,0 +1,75 @@
+{
+  "info": {
+    "name": "Portfolio Backend (Assignment 3)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "baseUrl", "value": "http://localhost:5000" }],
+  "item": [
+    {
+      "name": "B1 - Health check",
+      "request": { "method": "GET", "url": "{{baseUrl}}/" }
+    },
+    {
+      "name": "B2 - Get all projects",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/projects" }
+    },
+    {
+      "name": "B3 - Get single project (valid id)",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/projects/1" }
+    },
+    {
+      "name": "B3 - Get single project (invalid id -> 404)",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/projects/999" }
+    },
+    {
+      "name": "B4 - Submit contact (valid -> 201)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/contact",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Jane Doe\",\"email\":\"jane@example.com\",\"message\":\"Loved your portfolio!\"}"
+        }
+      }
+    },
+    {
+      "name": "B4 - Submit contact (missing fields -> 400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/contact",
+        "body": { "mode": "raw", "raw": "{\"name\":\"\",\"email\":\"\",\"message\":\"\"}" }
+      }
+    },
+    {
+      "name": "B4 - Submit contact (bad email -> 400)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/contact",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"name\":\"Jane\",\"email\":\"not-an-email\",\"message\":\"Hi\"}"
+        }
+      }
+    },
+    {
+      "name": "B5 - List all contact submissions",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/contact" }
+    },
+    {
+      "name": "B6 - Undefined route (-> 404 JSON)",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/doesnotexist" }
+    },
+    {
+      "name": "B6 - Malformed JSON (-> 400, server stays up)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{baseUrl}}/api/contact",
+        "body": { "mode": "raw", "raw": "{bad json" }
+      }
+    }
+  ]
+}

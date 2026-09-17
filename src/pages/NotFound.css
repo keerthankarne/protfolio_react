@@ -1,0 +1,19 @@
+.notfound-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 14px;
+  background: var(--bg);
+  color: var(--text-dim);
+  padding: 24px;
+  transition: var(--transition-theme);
+}
+
+.notfound-section h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  color: var(--text);
+}

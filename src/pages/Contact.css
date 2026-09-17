@@ -1,0 +1,55 @@
+.contact-section {
+  min-height: 100vh;
+  padding: 130px 0 80px;
+  background: var(--bg);
+  transition: var(--transition-theme);
+}
+
+.contact-inner {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex: 1 1 280px;
+  color: var(--text-dim);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-info h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.contact-lead {
+  max-width: 380px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.contact-info strong {
+  color: var(--text);
+}
+
+.contact-info a {
+  color: var(--accent);
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.contact-form-wrap {
+  flex: 1 1 320px;
+}
